@@ -1,0 +1,44 @@
+﻿We have used 3 models:
+i) Support Vector Classifier (SVC)
+ii) Multinomial Naive Bayes Classifier (MNB)
+iii) XGBoost
+
+
+
+
+We have split the Review Dataset into train(baseline) and test ratio of 0.8:0.2, which can be seen in the variable
+  split ratio = 0.2
+this value can be changed in the "#INITIALISATION" section of the notebook
+
+
+
+
+Following are the hyperparameter details and pipeline for each model:
+  we have used the following hyperparameters:
+    i) gamma(g) - for SVM
+    ii) alpha(a) - for MNB
+
+
+these hyperparameters can be found in the "#hyperparameters" part of the model code for each model in the CN_baseline.ipynb notebook
+and their values can be adjusted(tuned) for any specific model as per requirement, for obtaining best results for a given dataset.
+
+
+SVC:
+  embedding - tfidf
+  embedding features = 3003
+  input matrix dimension - (_, 3019)
+  kernel = linear
+  gamma = 2
+
+
+Multinomial Naive Bayes Classifier:
+  embedding - tfidf
+  embedding features = 3003
+  input matrix dimension - (_, 3019)
+  alpha = 0.29
+
+
+XGBoost:
+  embedding - tfidf
+  embedding features = 3000
+  input matrix dimension - (_, 3016)
